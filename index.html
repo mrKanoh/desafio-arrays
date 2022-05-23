@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./recursos/style.css">
+    <title>Desafío complementario</title>
+</head>
+<body>
+    <section class="contenedorTitulo">
+        <article class="titulo">
+            <h1>Incorporar Arrays</h1>
+            <h2>Ariel Mesina Ramírez</h2>
+        </article>
+    </section>
+    <section class="contenedorDescripcion">
+        <article class="descripcion">
+            <h3><span>#</span>Descripción</h2>
+            <p>La siguiente herramienta sirve para sumar, promediar, decir cual es el número mayor y menor de los digitos enteros ingresados por el usuario</p>
+        </article>
+    </section>
+    <section class="contenedorEjercicio">
+        <article class="ejercicio">
+            <label>Ingrese números enteros separados por una ( , )</label>
+            <div class="rellenar">
+                <input type="text" placeholder="21,42,30,14,5" id="numeroIngresado" name="Numeros enteros" />
+                <button id="btn_random" onclick="numeroRandom()"><i class="fa-solid fa-dice-six"></i></button>
+            </div>
+            <button id="btn_calcula" onclick="calcular()">Calcular</button>
+            <button id="btn_limpiar" onclick="location.reload()">Limpiar</button>
+        </article>
+    </section>
+    <section class="contenedorResultado">
+        <div id="resultado"></div>
+    </section>
+    <script src="https://kit.fontawesome.com/3862138d36.js" crossorigin="anonymous"></script>
+    <script src="./recursos/main.js"></script>
+</body>
+</html>

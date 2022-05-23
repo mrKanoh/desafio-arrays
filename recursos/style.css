@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --color-uno: #57b4ff;
+    --color-dos: #e3e3e3;
+    --color-fondo: #222326;
+    --color-fondo-2: #171717;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: var(--color-dos);
+    background-color: var(--color-fondo);
+}
+
+.contenedorTitulo {
+    margin-top: 2rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.titulo h1::before {
+    content: "Desafío complementario";
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 1%;
+    text-transform: uppercase;
+    color: var(--color-uno);
+    letter-spacing: .5rem;
+    font-size: 1rem;
+}
+
+.titulo h2 {
+    font-size: clamp(1.4rem, 1.8vw, 3rem);
+    letter-spacing: .2rem;
+    margin-top: .5rem;
+    position: relative;
+}
+
+.titulo h2::after {
+    content: "";
+    height: 2%;
+    width: 30%;
+    background-color: var(--color-uno);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -50%;
+}
+
+.contenedorDescripcion {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+    margin-top: 3rem;
+}
+
+/* Descripción del ejercicio */
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    border: solid 3px var(--color-uno);
+    border-radius: .5rem;
+    box-shadow: 10px 15px 0px 2px var(--color-fondo-2);
+}
+
+.descripcion h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    letter-spacing: .3rem;
+    background-color: var(--color-uno);
+    color: var(--color-fondo);
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+}
+
+.descripcion h3 span {
+    background-color: var(--color-uno);
+    color: var(--color-fondo);
+    font-size: 2rem;
+}
+
+.descripcion p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    letter-spacing: .1em;
+}
+
+/* Ejercicio */
+
+.contenedorEjercicio {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    position: relative;
+    max-width: 900px;
+}
+
+.contenedorEjercicio::before {
+    content: "↓";
+    font-size: 2rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 49%;
+    top: -18%;
+    color: var(--color-uno);
+}
+
+.ejercicio {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    border: 3px solid var(--color-uno);
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: .5rem;
+}
+
+.ejercicio label {
+    font-size: clamp(.9rem, 1.7vw, 1.3rem);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.ejercicio input {
+    font-size: clamp(1.5em, 3vw, 3rem);
+    text-align: center;
+    border: none;
+    background-color: var(--color-fondo-2);
+    border-radius: .2rem;
+    font-weight: 700;
+    caret-color: var(--color-uno)
+}
+
+#btn_calcula,
+#btn_random,
+#btn_limpiar {
+    background-color: var(--color-uno);
+    color: var(--color-fondo);
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: clamp(1.5rem, 2ve, 4rem);
+    border: none;
+}
+
+#btn_limpiar,
+#btn_random {
+    background-color: var(--color-fondo-2);
+    color: var(--color-uno);
+}
+
+#btn_calcula:hover,
+#btn_limpiar:hover,
+#btn_random:hover {
+    cursor: pointer;
+    filter: brightness(1.12);
+    -webkit-filter: brightness(1.12);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.rellenar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rellenar input {
+    width: 80%;
+    height: 100%;
+}
+.rellenar #btn_random {
+    width: 20%;
+    margin-top: 0;
+}
+
+.fa-dice-six:before {
+    color: var(--color-uno);
+    margin: 0;
+    font-size: 3rem;
+    background-color: var(--color-fondo-2);
+}
+
+.contenedorResultado {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#resultado {
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    color: var(--color-uno);
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    background-color: var(--color-fondo-2);
+}
